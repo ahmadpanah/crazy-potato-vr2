@@ -499,6 +499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthText: {fileID: 0}
+  moveSpeed: 9
 --- !u!1 &918375607
 GameObject:
   m_ObjectHideFlags: 0
