@@ -1,0 +1,375 @@
+/* MCP For Unity - Welcome window.
+
+   Same token names as MCPForUnityDocs.uss so both windows read as one product, and the same
+   .ab--light override block: every colour here used to be a hardcoded light grey, which is
+   unreadable on the light editor skin (body text measured at 1.1:1 against it). */
+
+.ab-welcome {
+    flex-grow: 1;
+
+    --ab-accent: rgb(232, 163, 61);
+    --ab-accent-strong: rgb(240, 214, 176);
+    --ab-accent-bg-weak: rgba(232, 163, 61, 0.08);
+    --ab-accent-bg: rgba(232, 163, 61, 0.24);
+    --ab-accent-bg-strong: rgba(232, 163, 61, 0.38);
+    --ab-accent-border: rgba(232, 163, 61, 0.6);
+    --ab-accent-tint: rgba(232, 163, 61, 0.09);
+
+    --ab-text: rgb(205, 205, 205);
+    --ab-text-strong: rgb(226, 226, 226);
+    /* Opaque, and lighter than they look like they should be. These two carry the secondary text
+       roles - the live bridge address, the check status line, the footer note - and as translucent
+       greys they measured 2.7:1 and 4.0:1 on the dark editor background. Alpha over a backdrop that
+       changes per card is exactly what makes a contrast unpredictable, so the alpha is gone. */
+    --ab-text-dim: rgb(180, 180, 180);
+    --ab-text-muted: rgb(192, 192, 192);
+
+    --ab-surface: rgba(255, 255, 255, 0.03);
+    --ab-surface-sunken: rgba(0, 0, 0, 0.12);
+    --ab-border: rgba(255, 255, 255, 0.08);
+    --ab-border-strong: rgba(0, 0, 0, 0.35);
+
+    --ab-btn-bg: rgba(255, 255, 255, 0.06);
+    --ab-btn-bg-hover: rgba(255, 255, 255, 0.12);
+    --ab-btn-border: rgba(255, 255, 255, 0.14);
+    --ab-btn-text: rgb(215, 215, 215);
+
+    --ab-ok: rgb(90, 190, 120);
+    --ab-ok-bright: rgb(120, 205, 150);
+    --ab-ok-bg: rgba(90, 190, 120, 0.07);
+    --ab-ok-badge-bg: rgba(90, 190, 120, 0.22);
+    --ab-ok-text: rgb(150, 225, 175);
+    --ab-error: rgb(215, 95, 85);
+    --ab-error-bg: rgba(215, 95, 85, 0.08);
+    --ab-error-badge-bg: rgba(215, 95, 85, 0.22);
+    /* Brightened for the same stacking reason as their light counterparts: on a badge background
+       laid over an already tinted card they measured 4.33:1 and 4.21:1. */
+    --ab-error-text: rgb(248, 180, 172);
+    --ab-badge-bg: rgba(255, 255, 255, 0.1);
+    --ab-badge-text: rgb(220, 220, 220);
+    --ab-warn-text: rgb(250, 218, 172);
+
+    /* Same three values as MCPForUnityDocs.uss: a command block should not look like a different
+       product depending on which window it is read in. */
+    --ab-code-bg: rgba(0, 0, 0, 0.35);
+    --ab-code-border: rgba(255, 255, 255, 0.06);
+    --ab-code-text: rgb(214, 222, 200);
+}
+
+.ab-welcome.ab--light {
+    /* Same measured floor as the docs sheet: 4.5:1 on the light editor background. */
+    --ab-accent: rgb(112, 62, 0);
+    --ab-accent-strong: rgb(96, 55, 2);
+    --ab-accent-bg-weak: rgba(232, 163, 61, 0.16);
+    --ab-accent-bg: rgba(232, 163, 61, 0.34);
+    --ab-accent-bg-strong: rgba(232, 163, 61, 0.52);
+    --ab-accent-border: rgba(138, 79, 4, 0.55);
+    --ab-accent-tint: rgba(232, 163, 61, 0.2);
+
+    --ab-text: rgb(38, 38, 38);
+    --ab-text-strong: rgb(18, 18, 18);
+    --ab-text-dim: rgb(74, 74, 74);
+    --ab-text-muted: rgb(78, 78, 78);
+
+    --ab-surface: rgba(255, 255, 255, 0.55);
+    --ab-surface-sunken: rgba(0, 0, 0, 0.06);
+    --ab-border: rgba(0, 0, 0, 0.14);
+    --ab-border-strong: rgba(0, 0, 0, 0.22);
+
+    --ab-btn-bg: rgba(255, 255, 255, 0.6);
+    --ab-btn-bg-hover: rgba(255, 255, 255, 0.9);
+    --ab-btn-border: rgba(0, 0, 0, 0.2);
+    --ab-btn-text: rgb(35, 35, 35);
+
+    --ab-ok: rgb(28, 116, 58);
+    /* The step "OK" marker is bold 13px, which is below WCAG's large-text threshold, so it has
+       to clear the full 4.5:1 like body text rather than the 3:1 a heading gets away with. */
+    --ab-ok-bright: rgb(18, 84, 40);
+    --ab-ok-bg: rgba(90, 190, 120, 0.18);
+    --ab-ok-badge-bg: rgba(90, 190, 120, 0.3);
+    /* Darker than the value a badge on a plain surface needs, because these two now also colour a
+       9px chip whose badge background sits on top of an already tinted step card - two coats of the
+       same hue. Measured on that stack: 4.37:1 and 3.89:1 before, 5.0:1 and 5.0:1 after. */
+    --ab-ok-text: rgb(16, 78, 38);
+    --ab-error: rgb(168, 40, 30);
+    --ab-error-bg: rgba(215, 95, 85, 0.18);
+    --ab-error-badge-bg: rgba(215, 95, 85, 0.3);
+    --ab-error-text: rgb(112, 16, 10);
+    --ab-badge-bg: rgba(0, 0, 0, 0.1);
+    --ab-badge-text: rgb(35, 35, 35);
+    /* Same correction as the ok/error pair above, and it was already wrong before the chips existed:
+       the status card's own badge stacks accent-bg on accent-tint and measured 4.17:1 there. */
+    --ab-warn-text: rgb(108, 60, 2);
+
+    --ab-code-bg: rgba(255, 255, 255, 0.82);
+    --ab-code-border: rgba(0, 0, 0, 0.12);
+    --ab-code-text: rgb(42, 58, 28);
+}
+
+/* -- Header ------------------------------------------------------------- */
+.ab-welcome__header {
+    flex-direction: row;
+    align-items: center;
+    padding: 14px 22px 12px 22px;
+    background-color: var(--ab-accent-bg-weak);
+    border-bottom-width: 1px;
+    border-bottom-color: var(--ab-border-strong);
+}
+.ab-welcome__header-text { flex-grow: 1; }
+.ab-welcome__title {
+    font-size: 22px;
+    -unity-font-style: bold;
+    color: var(--ab-accent);
+    white-space: normal;
+}
+.ab-welcome__subtitle {
+    font-size: 11px;
+    color: var(--ab-text-muted);
+    margin-top: 2px;
+    white-space: normal;
+}
+
+/* -- Body --------------------------------------------------------------- */
+.ab-welcome__body { flex-grow: 1; padding: 14px 22px 18px 22px; }
+
+.ab-welcome__section-title {
+    font-size: 14px;
+    -unity-font-style: bold;
+    color: var(--ab-text-strong);
+    margin: 16px 0 6px 0;
+    white-space: normal;
+}
+.ab-welcome__para {
+    font-size: 12px;
+    color: var(--ab-text);
+    white-space: normal;
+    margin: 2px 0;
+}
+.ab-welcome__divider { height: 1px; background-color: var(--ab-border); margin: 14px 0; }
+
+/* -- Status card -------------------------------------------------------- */
+.ab-welcome__card {
+    margin: 4px 0 6px 0;
+    padding: 12px 14px;
+    border-radius: 5px;
+    background-color: var(--ab-surface);
+    border-width: 1px;
+    border-color: var(--ab-border);
+    border-left-width: 3px;
+    border-left-color: var(--ab-border);
+}
+.ab-welcome__card--ok { border-left-color: var(--ab-ok); background-color: var(--ab-ok-bg); }
+.ab-welcome__card--warn { border-left-color: var(--ab-accent); background-color: var(--ab-accent-tint); }
+.ab-welcome__card--error { border-left-color: var(--ab-error); background-color: var(--ab-error-bg); }
+
+.ab-welcome__badge {
+    font-size: 10px;
+    -unity-font-style: bold;
+    padding: 2px 8px;
+    border-radius: 9px;
+    align-self: flex-start;
+    background-color: var(--ab-badge-bg);
+    color: var(--ab-badge-text);
+    margin-bottom: 6px;
+}
+.ab-welcome__badge--ok { background-color: var(--ab-ok-badge-bg); color: var(--ab-ok-text); }
+.ab-welcome__badge--warn { background-color: var(--ab-accent-bg); color: var(--ab-warn-text); }
+.ab-welcome__badge--error { background-color: var(--ab-error-badge-bg); color: var(--ab-error-text); }
+
+.ab-welcome__card-title {
+    font-size: 14px;
+    -unity-font-style: bold;
+    color: var(--ab-text-strong);
+    white-space: normal;
+}
+.ab-welcome__card-detail {
+    font-size: 12px;
+    color: var(--ab-text);
+    white-space: normal;
+    margin-top: 3px;
+}
+/* Secondary line under the card detail: the pinned/branch state, the live bridge address. */
+.ab-welcome__card-note {
+    font-size: 11px;
+    color: var(--ab-text-dim);
+    white-space: normal;
+    margin-top: 4px;
+}
+
+/* -- Buttons ------------------------------------------------------------ */
+.ab-welcome__actions { flex-direction: row; flex-wrap: wrap; margin-top: 10px; }
+.ab-welcome__btn {
+    padding: 5px 14px;
+    margin: 0 6px 4px 0;
+    border-radius: 3px;
+    border-width: 1px;
+    border-color: var(--ab-btn-border);
+    background-color: var(--ab-btn-bg);
+    color: var(--ab-btn-text);
+}
+.ab-welcome__btn:hover { background-color: var(--ab-btn-bg-hover); }
+.ab-welcome__btn--primary {
+    -unity-font-style: bold;
+    background-color: var(--ab-accent-bg);
+    border-color: var(--ab-accent-border);
+    color: var(--ab-accent-strong);
+}
+.ab-welcome__btn--primary:hover { background-color: var(--ab-accent-bg-strong); }
+.ab-welcome__btn:disabled { opacity: 0.45; }
+
+/* -- Setup wizard header ------------------------------------------------- */
+.ab-welcome__setup-head { flex-direction: row; align-items: center; flex-wrap: wrap; }
+.ab-welcome__setup-head-title { margin-right: 10px; }
+.ab-welcome__setup-status { font-size: 11px; color: var(--ab-text-dim); white-space: normal; }
+
+/* Status chip: the four-word answer of the last verification pass. */
+.ab-welcome__chip {
+    font-size: 9px;
+    -unity-font-style: bold;
+    letter-spacing: 1px;
+    padding: 2px 8px;
+    margin: 0 8px 0 6px;
+    border-radius: 9px;
+    align-self: center;
+    background-color: var(--ab-badge-bg);
+    color: var(--ab-badge-text);
+}
+.ab-welcome__chip--ok { background-color: var(--ab-ok-badge-bg); color: var(--ab-ok-text); }
+.ab-welcome__chip--warn { background-color: var(--ab-accent-bg); color: var(--ab-warn-text); }
+.ab-welcome__chip--error { background-color: var(--ab-error-badge-bg); color: var(--ab-error-text); }
+.ab-welcome__chip--neutral { background-color: var(--ab-badge-bg); color: var(--ab-badge-text); }
+
+/* -- Steps -------------------------------------------------------------- */
+.ab-welcome__step {
+    flex-direction: row;
+    margin: 6px 0;
+    padding: 9px 11px;
+    border-radius: 5px;
+    background-color: var(--ab-surface);
+    border-width: 1px;
+    border-color: var(--ab-border);
+}
+.ab-welcome__step--done { border-color: var(--ab-ok); background-color: var(--ab-ok-bg); }
+.ab-welcome__step--attention { border-color: var(--ab-error); background-color: var(--ab-error-bg); }
+.ab-welcome__step-index {
+    width: 22px;
+    min-width: 22px;
+    -unity-font-style: bold;
+    -unity-text-align: upper-center;
+    color: var(--ab-accent);
+    font-size: 13px;
+}
+.ab-welcome__step-index--done { color: var(--ab-ok-bright); }
+.ab-welcome__step-text { flex-grow: 1; flex-shrink: 1; }
+.ab-welcome__step-head { flex-direction: row; align-items: center; }
+.ab-welcome__step-title { -unity-font-style: bold; font-size: 12px; color: var(--ab-text-strong); white-space: normal; }
+.ab-welcome__step-body {
+    font-size: 11px;
+    color: var(--ab-text);
+    white-space: normal;
+    margin-top: 2px;
+}
+/* What the verification pass found, kept visually apart from the static explanation above it. */
+.ab-welcome__step-check {
+    margin-top: 5px;
+    font-size: 11px;
+    white-space: normal;
+    color: var(--ab-text-muted);
+}
+.ab-welcome__step-check--ok { color: var(--ab-ok-text); }
+.ab-welcome__step-check--warn { color: var(--ab-warn-text); }
+.ab-welcome__step-check--error { color: var(--ab-error-text); }
+.ab-welcome__step-check--neutral { color: var(--ab-text-muted); }
+
+.ab-welcome__step-para {
+    font-size: 11px;
+    color: var(--ab-text);
+    white-space: normal;
+    margin-top: 8px;
+}
+.ab-welcome__hint {
+    font-size: 10px;
+    color: var(--ab-text-dim);
+    white-space: normal;
+    margin-top: 5px;
+}
+
+/* The step's own verdict button. Deliberately far larger than the checkbox it replaces: it is
+   the one control on the page that records a decision the editor could not make itself. */
+.ab-welcome__done-btn {
+    margin: 9px 0 2px 0;
+    padding: 7px 16px;
+    align-self: flex-start;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: var(--ab-accent-border);
+    background-color: var(--ab-accent-bg-weak);
+    color: var(--ab-accent-strong);
+    font-size: 12px;
+    -unity-font-style: bold;
+}
+.ab-welcome__done-btn:hover { background-color: var(--ab-accent-bg); }
+.ab-welcome__done-btn--marked {
+    border-color: var(--ab-ok);
+    background-color: var(--ab-ok-bg);
+    color: var(--ab-ok-text);
+    -unity-font-style: normal;
+}
+.ab-welcome__done-btn--marked:hover { background-color: var(--ab-ok-badge-bg); }
+
+/* -- Simple / manual route switch --------------------------------------- */
+.ab-welcome__methods { flex-direction: row; flex-wrap: wrap; margin-top: 9px; }
+.ab-welcome__pill {
+    padding: 4px 12px;
+    margin: 0 6px 0 0;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: var(--ab-btn-border);
+    background-color: var(--ab-btn-bg);
+    color: var(--ab-text-muted);
+    font-size: 11px;
+}
+.ab-welcome__pill:hover { background-color: var(--ab-btn-bg-hover); }
+.ab-welcome__pill--active {
+    -unity-font-style: bold;
+    background-color: var(--ab-accent-bg);
+    border-color: var(--ab-accent-border);
+    color: var(--ab-accent-strong);
+}
+
+/* -- Copyable command --------------------------------------------------- */
+.ab-welcome__code {
+    margin: 6px 0 2px 0;
+    padding: 8px 10px;
+    padding-right: 58px;
+    border-radius: 4px;
+    background-color: var(--ab-code-bg);
+    border-width: 1px;
+    border-color: var(--ab-code-border);
+}
+/* Wrapping rather than clipping: the assistant prompt is prose, and this window is resizable. */
+.ab-welcome__code-text { white-space: normal; font-size: 11px; color: var(--ab-code-text); }
+.ab-welcome__code-copy {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-size: 10px;
+    padding: 1px 8px;
+    opacity: 0.7;
+}
+.ab-welcome__code-copy:hover { opacity: 1; }
+.ab-welcome__code-copy--done { opacity: 1; color: var(--ab-ok); -unity-font-style: bold; }
+
+/* -- Footer ------------------------------------------------------------- */
+.ab-welcome__footer {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 7px 22px;
+    border-top-width: 1px;
+    border-top-color: var(--ab-border-strong);
+    background-color: var(--ab-surface-sunken);
+}
+.ab-welcome__footer-toggle { margin-right: 18px; font-size: 11px; }
+.ab-welcome__footer-spacer { flex-grow: 1; }
+.ab-welcome__footer-note { font-size: 10px; color: var(--ab-text-dim); white-space: normal; }

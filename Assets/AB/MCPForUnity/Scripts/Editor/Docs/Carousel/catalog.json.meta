@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2abb5891885bb1941b894bbbb44d01c5
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 395602
+  packageName: AnkleBreaker MCP Plugin for Unity
+  packageVersion: 1.0.1
+  assetPath: Assets/AB/MCPForUnity/Scripts/Editor/Docs/Carousel/catalog.json
+  uploadId: 1007974

@@ -1,0 +1,14 @@
+﻿<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="docs-root" class="ab-docs">
+        <ui:VisualElement name="docs-toolbar" class="ab-docs__toolbar">
+            <ui:Button name="nav-back" text="◀" class="ab-docs__nav-btn" tooltip="Back" />
+            <ui:Button name="nav-fwd" text="▶" class="ab-docs__nav-btn" tooltip="Forward" />
+            <ui:VisualElement name="tab-bar" class="ab-docs__tabs" />
+            <uie:ToolbarSearchField name="docs-search" class="ab-docs__search" tooltip="Search every page (title and content)." />
+        </ui:VisualElement>
+        <ui:VisualElement name="docs-body" class="ab-docs__body">
+            <ui:ScrollView name="docs-sidebar" class="ab-docs__sidebar" />
+            <ui:ScrollView name="docs-content" class="ab-docs__content" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

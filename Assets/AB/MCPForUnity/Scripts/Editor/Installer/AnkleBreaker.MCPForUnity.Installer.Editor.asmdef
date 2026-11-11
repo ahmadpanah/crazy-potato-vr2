@@ -1,0 +1,22 @@
+﻿{
+    "name": "AnkleBreaker.MCPForUnity.Installer.Editor",
+    "rootNamespace": "AnkleBreaker.MCPForUnity.Installer.Editor",
+    "references": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.anklebreaker.unity-mcp",
+            "expression": "",
+            "define": "AB_UNITY_MCP"
+        }
+    ],
+    "noEngineReferences": false
+}

@@ -1,0 +1,12 @@
+﻿<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:VisualElement name="welcome-root" class="ab-welcome">
+        <ui:VisualElement name="welcome-header" class="ab-welcome__header">
+            <ui:VisualElement class="ab-welcome__header-text">
+                <ui:Label name="welcome-title" text="MCP For Unity" class="ab-welcome__title" />
+                <ui:Label name="welcome-subtitle" text="Bring AI assistants into the Unity Editor, by AnkleBreaker Studio" class="ab-welcome__subtitle" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:ScrollView name="welcome-body" class="ab-welcome__body" />
+        <ui:VisualElement name="welcome-footer" class="ab-welcome__footer" />
+    </ui:VisualElement>
+</ui:UXML>

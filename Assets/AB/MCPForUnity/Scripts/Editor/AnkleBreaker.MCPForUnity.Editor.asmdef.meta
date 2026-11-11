@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 77ea81c8335e9ba40acf1fcf38e9298f
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 395602
+  packageName: AnkleBreaker MCP Plugin for Unity
+  packageVersion: 1.0.1
+  assetPath: Assets/AB/MCPForUnity/Scripts/Editor/AnkleBreaker.MCPForUnity.Editor.asmdef
+  uploadId: 1007974

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a81afd95cb4da264aacb83bd56c0b322
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 395602
+  packageName: AnkleBreaker MCP Plugin for Unity
+  packageVersion: 1.0.1
+  assetPath: Assets/AB/MCPForUnity/SKILL.md
+  uploadId: 1007974

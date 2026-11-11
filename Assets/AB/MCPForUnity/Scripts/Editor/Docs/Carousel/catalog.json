@@ -1,0 +1,310 @@
+{
+  "publisherUrl": "https://assetstore.unity.com/publishers/101837",
+  "sourceUpdated": "2026-09-21",
+  "products": [
+    {
+      "id": "Tombstack",
+      "name": "Tombstack",
+      "blurb": "Free crash, exception and session telemetry.",
+      "url": "https://assetstore.unity.com/packages/tools/utilities/tombstack-analytics-system-395594",
+      "cardFile": "Tombstack.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Engraver",
+      "name": "Engraver",
+      "blurb": "Crash-safe save and load, with history and migration.",
+      "url": "https://assetstore.unity.com/packages/tools/game-toolkits/engraver-saving-system-393208",
+      "cardFile": "Engraver.jpg",
+      "status": "published"
+    },
+    {
+      "id": "ManagersLoader",
+      "name": "Managers Loader System",
+      "blurb": "Scene-driven manager start-up with dependency resolution.",
+      "url": "https://assetstore.unity.com/packages/tools/integration/managers-loader-system-367210",
+      "cardFile": "ManagersLoader.jpg",
+      "status": "published"
+    },
+    {
+      "id": "TweenInInspector",
+      "name": "Tween In Inspector",
+      "blurb": "Tweens authored in the Inspector, with a timeline.",
+      "url": "https://assetstore.unity.com/packages/tools/gui/tween-in-inspector-animate-ui-in-few-clicks-371488",
+      "cardFile": "TweenInInspector.jpg",
+      "status": "published"
+    },
+    {
+      "id": "CinematicCameraController",
+      "name": "Cinematic Camera Controller",
+      "blurb": "Waypoint camera paths, with Timeline and Cinemachine 3.",
+      "url": "https://assetstore.unity.com/packages/tools/camera/cinematic-camera-controller-372344",
+      "cardFile": "CinematicCameraController.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Changeling",
+      "name": "Changeling",
+      "blurb": "Dressable characters, merged into one mesh at runtime.",
+      "url": "https://assetstore.unity.com/packages/tools/modeling/changeling-aaa-character-customisation-400438",
+      "cardFile": "Changeling.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Gatling",
+      "name": "Gatling",
+      "blurb": "Thousands of live projectiles, hitscan and travel time.",
+      "url": "https://assetstore.unity.com/packages/tools/physics/gatling-projectile-ballistics-system-393206",
+      "cardFile": "Gatling.jpg",
+      "status": "published"
+    },
+    {
+      "id": "RadialMenu",
+      "name": "Radial Menu Toolkit",
+      "blurb": "Radial menus from 10 presets, editable at runtime.",
+      "url": "https://assetstore.unity.com/packages/tools/gui/radial-menu-toolkit-287336",
+      "cardFile": "RadialMenu.jpg",
+      "status": "published"
+    },
+    {
+      "id": "PopupMaster",
+      "name": "Popup Master",
+      "blurb": "Toasts, banners, modals and combat text in UI Toolkit.",
+      "url": "https://assetstore.unity.com/packages/tools/gui/popup-master-toast-banner-modal-window-and-more-387192",
+      "cardFile": "PopupMaster.jpg",
+      "status": "published"
+    },
+    {
+      "id": "MapGUIPro",
+      "name": "Map GUI Pro",
+      "blurb": "Minimap, compass and fullscreen map, in UI Toolkit.",
+      "url": "https://assetstore.unity.com/packages/tools/gui/map-gui-pro-minimap-map-compass-385920",
+      "cardFile": "MapGUIPro.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Cartograph",
+      "name": "Cartograph",
+      "blurb": "Minimap textures drawn from any Unity scene.",
+      "url": "https://assetstore.unity.com/packages/tools/gui/cartograph-map-texture-drawer-377364",
+      "cardFile": "Cartograph.jpg",
+      "status": "published"
+    },
+    {
+      "id": "ManagersLoaderFishNet",
+      "name": "FishNet Add-on for Managers Loader",
+      "blurb": "Networked, server-only and client-only managers.",
+      "url": "https://assetstore.unity.com/packages/tools/network/fishnet-addon-for-managers-loader-system-368412",
+      "cardFile": "ManagersLoaderFishNet.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Cauldron",
+      "name": "Stylized Cauldron",
+      "blurb": "A cauldron station in three tiers, with an animated bellows.",
+      "url": "https://assetstore.unity.com/packages/3d/props/furniture/stylized-cauldron-3-tiers-aaa-quality-400446",
+      "cardFile": "Cauldron.jpg",
+      "status": "published"
+    },
+    {
+      "id": "CashRegister",
+      "name": "Stylized Cash Register",
+      "blurb": "A cash register in three tiers, with a working drawer.",
+      "url": "https://assetstore.unity.com/packages/3d/props/furniture/stylized-cash-register-icons-3-tiers-aaa-quality-400440",
+      "cardFile": "CashRegister.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Counters",
+      "name": "Stylized Counters",
+      "blurb": "Modular counters on a 1 m grid: runs, L-shapes and islands.",
+      "url": "https://assetstore.unity.com/packages/3d/props/furniture/stylized-counters-icons-3-tiers-aaa-quality-400444",
+      "cardFile": "Counters.jpg",
+      "status": "published"
+    },
+    {
+      "id": "LeatherWorkbench2",
+      "name": "Leather Workbench #2",
+      "blurb": "A leatherworking bench in three tiers, dressed with tools.",
+      "url": "https://assetstore.unity.com/packages/3d/props/furniture/stylized-leather-workbench-2-3-tiers-aaa-quality-400452",
+      "cardFile": "LeatherWorkbench2.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Stylized322748",
+      "name": "Stylized Blacksmith Workbenches",
+      "blurb": "",
+      "url": "https://assetstore.unity.com/packages/3d/props/furniture/stylized-blacksmith-workbenches-icons-322748",
+      "cardFile": "StylizedBlacksmithWorkbenches.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Stylized326495",
+      "name": "Stylized Brewing Station",
+      "blurb": "",
+      "url": "https://assetstore.unity.com/packages/3d/props/furniture/stylized-brewing-station-icons-326495",
+      "cardFile": "StylizedBrewingStation.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Stylized324147",
+      "name": "Stylized Cooking Workbenches, Items",
+      "blurb": "",
+      "url": "https://assetstore.unity.com/packages/3d/props/furniture/stylized-cooking-workbenches-items-icons-324147",
+      "cardFile": "StylizedCookingWorkbenchesItems.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Stylized324059",
+      "name": "Stylized Engineer Workbenches",
+      "blurb": "",
+      "url": "https://assetstore.unity.com/packages/3d/props/furniture/stylized-engineer-workbenches-icons-324059",
+      "cardFile": "StylizedEngineerWorkbenches.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Stylized319673",
+      "name": "Stylized Fantasy GreatSwords",
+      "blurb": "",
+      "url": "https://assetstore.unity.com/packages/3d/props/weapons/stylized-fantasy-greatswords-icons-319673",
+      "cardFile": "StylizedFantasyGreatSwords.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Stylized319676",
+      "name": "Stylized Fantasy Resources - Minerals",
+      "blurb": "",
+      "url": "https://assetstore.unity.com/packages/3d/environments/stylized-fantasy-resources-icons-minerals-319676",
+      "cardFile": "StylizedFantasyResourcesMinerals.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Stylized319675",
+      "name": "Stylized Fantasy Resources - Rocks",
+      "blurb": "",
+      "url": "https://assetstore.unity.com/packages/3d/environments/stylized-fantasy-resources-icons-rocks-319675",
+      "cardFile": "StylizedFantasyResourcesRocks.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Stylized319674",
+      "name": "Stylized Fantasy Rounded Shields",
+      "blurb": "",
+      "url": "https://assetstore.unity.com/packages/3d/props/weapons/stylized-fantasy-rounded-shields-icons-319674",
+      "cardFile": "StylizedFantasyRoundedShields.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Stylized322140",
+      "name": "Stylized Fantasy Spears",
+      "blurb": "",
+      "url": "https://assetstore.unity.com/packages/3d/props/weapons/stylized-fantasy-spears-icons-322140",
+      "cardFile": "StylizedFantasySpears.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Stylized319672",
+      "name": "Stylized Fantasy Swords",
+      "blurb": "",
+      "url": "https://assetstore.unity.com/packages/3d/props/weapons/stylized-fantasy-swords-icons-319672",
+      "cardFile": "StylizedFantasySwords.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Stylized319677",
+      "name": "Stylized Fantasy Tools",
+      "blurb": "",
+      "url": "https://assetstore.unity.com/packages/3d/props/tools/stylized-fantasy-tools-icons-319677",
+      "cardFile": "StylizedFantasyTools.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Stylized320457",
+      "name": "Stylized Fantasy Towershields",
+      "blurb": "",
+      "url": "https://assetstore.unity.com/packages/3d/props/weapons/stylized-fantasy-towershields-icons-320457",
+      "cardFile": "StylizedFantasyTowershields.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Stylized323863",
+      "name": "Stylized Furnaces",
+      "blurb": "",
+      "url": "https://assetstore.unity.com/packages/3d/props/furniture/stylized-furnaces-icons-323863",
+      "cardFile": "StylizedFurnaces.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Stylized325259",
+      "name": "Stylized Goblins Archer & Warrior",
+      "blurb": "",
+      "url": "https://assetstore.unity.com/packages/3d/characters/humanoids/fantasy/stylized-goblins-archer-warrior-325259",
+      "cardFile": "StylizedGoblinsArcherWarrior.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Stylized322830",
+      "name": "Stylized Grinder Workbenches",
+      "blurb": "",
+      "url": "https://assetstore.unity.com/packages/3d/props/furniture/stylized-grinder-workbenches-icons-322830",
+      "cardFile": "StylizedGrinderWorkbenches.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Stylized321828",
+      "name": "Stylized Ibex",
+      "blurb": "",
+      "url": "https://assetstore.unity.com/packages/3d/characters/animals/mammals/stylized-ibex-animations-icons-321828",
+      "cardFile": "StylizedIbex.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Stylized323982",
+      "name": "Stylized Leather Workbenches",
+      "blurb": "",
+      "url": "https://assetstore.unity.com/packages/3d/props/furniture/stylized-leather-workbenches-icons-323982",
+      "cardFile": "StylizedLeatherWorkbenches.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Stylized323273",
+      "name": "Stylized Melee Weapons & Shields",
+      "blurb": "",
+      "url": "https://assetstore.unity.com/packages/3d/props/weapons/stylized-melee-weapons-shields-megapack-1-323273",
+      "cardFile": "StylizedMeleeWeaponsShieldsMegapack1.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Stylized327229",
+      "name": "Stylized Ranged Weapons",
+      "blurb": "",
+      "url": "https://assetstore.unity.com/packages/3d/props/weapons/stylized-ranged-weapons-icons-327229",
+      "cardFile": "StylizedRangedWeapons.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Stylized322866",
+      "name": "Stylized Tailor Workbench",
+      "blurb": "",
+      "url": "https://assetstore.unity.com/packages/3d/props/furniture/stylized-tailor-workbench-icons-322866",
+      "cardFile": "StylizedTailorWorkbench.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Stylized322652",
+      "name": "Stylized Wood Workbench",
+      "blurb": "",
+      "url": "https://assetstore.unity.com/packages/3d/props/furniture/stylized-wood-workbench-icons-322652",
+      "cardFile": "StylizedWoodWorkbench.jpg",
+      "status": "published"
+    },
+    {
+      "id": "Stylized327038",
+      "name": "Stylized Workbenches",
+      "blurb": "",
+      "url": "https://assetstore.unity.com/packages/3d/props/furniture/stylized-workbenches-megapack-2-327038",
+      "cardFile": "StylizedWorkbenchesMegapack2.jpg",
+      "status": "published"
+    }
+  ]
+}

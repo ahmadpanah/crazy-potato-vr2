@@ -1,0 +1,231 @@
+/* AnkleBreaker Documentation window — shared Forge Amber design (ab-docs__*).
+
+   Every colour is a variable, and the whole palette is redefined under .ab--light, which
+   MCPForUnityTheme puts on this root when the editor is NOT on the pro (dark) skin.
+
+   Why: the first version of this sheet hardcoded light greys — rgb(205,205,205) body text and
+   a #E8A33D accent. That reads at 7.4:1 on the dark editor background and at *1.1:1* on the
+   light one, i.e. lighter than the surface it sits on. On a light-theme editor the entire
+   manual was invisible. It was never seen because the machine it was written on runs the dark
+   skin. Both palettes below are measured against WCAG AA (4.5:1 for body text). */
+
+.ab-docs {
+    flex-grow: 1;
+
+    --ab-accent: rgb(232, 163, 61);
+    --ab-accent-strong: rgb(235, 210, 170);
+    --ab-accent-bg-weak: rgba(232, 163, 61, 0.12);
+    --ab-accent-bg: rgba(232, 163, 61, 0.2);
+    --ab-accent-bg-strong: rgba(232, 163, 61, 0.32);
+    --ab-accent-border: rgba(232, 163, 61, 0.5);
+
+    --ab-text: rgb(205, 205, 205);
+    --ab-text-strong: rgb(226, 226, 226);
+    --ab-text-dim: rgba(200, 200, 200, 0.5);
+    --ab-text-muted: rgba(210, 210, 210, 0.75);
+
+    --ab-surface: rgba(255, 255, 255, 0.03);
+    --ab-surface-sunken: rgba(0, 0, 0, 0.12);
+    --ab-border: rgba(255, 255, 255, 0.07);
+    --ab-border-strong: rgba(0, 0, 0, 0.35);
+
+    --ab-code-bg: rgba(0, 0, 0, 0.35);
+    --ab-code-border: rgba(255, 255, 255, 0.06);
+    --ab-code-text: rgb(214, 222, 200);
+
+    --ab-info: rgb(80, 140, 220);
+    --ab-info-bg: rgba(80, 140, 220, 0.12);
+    --ab-info-text: rgb(160, 195, 245);
+    --ab-ok: rgb(90, 190, 120);
+    --ab-ok-bg: rgba(90, 190, 120, 0.12);
+    --ab-ok-text: rgb(150, 225, 175);
+    --ab-warn: rgb(230, 130, 50);
+    --ab-warn-bg: rgba(230, 160, 60, 0.14);
+    --ab-warn-text: rgb(245, 195, 130);
+}
+
+.ab-docs.ab--light {
+    /* Dark enough to clear 4.5:1 on the light editor background at body size, measured — the
+       first pass at rgb(138,79,4) only reached 3.7:1, which is fine for a 20px heading and not
+       fine for a bold 12px tab. One accent, one bar to clear. */
+    --ab-accent: rgb(112, 62, 0);
+    --ab-accent-strong: rgb(96, 55, 2);
+    --ab-accent-bg-weak: rgba(232, 163, 61, 0.18);
+    --ab-accent-bg: rgba(232, 163, 61, 0.32);
+    --ab-accent-bg-strong: rgba(232, 163, 61, 0.5);
+    --ab-accent-border: rgba(138, 79, 4, 0.55);
+
+    --ab-text: rgb(38, 38, 38);
+    --ab-text-strong: rgb(18, 18, 18);
+    /* Breadcrumbs and footnotes are 10px; "secondary" cannot mean "below the contrast floor". */
+    --ab-text-dim: rgb(74, 74, 74);
+    --ab-text-muted: rgb(78, 78, 78);
+
+    --ab-surface: rgba(255, 255, 255, 0.55);
+    --ab-surface-sunken: rgba(0, 0, 0, 0.06);
+    --ab-border: rgba(0, 0, 0, 0.14);
+    --ab-border-strong: rgba(0, 0, 0, 0.22);
+
+    --ab-code-bg: rgba(255, 255, 255, 0.82);
+    --ab-code-border: rgba(0, 0, 0, 0.12);
+    --ab-code-text: rgb(42, 58, 28);
+
+    --ab-info: rgb(32, 82, 158);
+    --ab-info-bg: rgba(80, 140, 220, 0.16);
+    --ab-info-text: rgb(26, 66, 128);
+    --ab-ok: rgb(28, 116, 58);
+    --ab-ok-bg: rgba(90, 190, 120, 0.2);
+    --ab-ok-text: rgb(22, 92, 46);
+    --ab-warn: rgb(166, 78, 8);
+    --ab-warn-bg: rgba(230, 160, 60, 0.22);
+    --ab-warn-text: rgb(128, 60, 4);
+}
+
+/* -- Toolbar ------------------------------------------------------------ */
+.ab-docs__toolbar {
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 6px;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--ab-border-strong);
+    background-color: var(--ab-surface-sunken);
+}
+.ab-docs__nav-btn { width: 26px; -unity-text-align: middle-center; }
+.ab-docs__tabs { flex-direction: row; margin-left: 8px; flex-grow: 1; }
+/* Tabs and sidebar entries are Buttons, not click-handling Labels: a Label takes no keyboard
+   focus and shows no pointer affordance, so the whole navigation was mouse-only. The rules below
+   undo the Unity button chrome that comes with the change. */
+.ab-docs__tab {
+    padding: 4px 12px;
+    margin: 0 2px 0 0;
+    border-radius: 3px 3px 0 0;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    -unity-font-style: bold;
+    color: var(--ab-text-muted);
+}
+.ab-docs__tab:hover { background-color: var(--ab-accent-bg-weak); color: var(--ab-text-strong); }
+.ab-docs__tab:focus { color: var(--ab-text-strong); }
+.ab-docs__tab--active {
+    background-color: var(--ab-accent-bg);
+    color: var(--ab-accent);
+    border-bottom-width: 2px;
+    border-bottom-color: var(--ab-accent);
+}
+.ab-docs__search { width: 220px; }
+
+/* -- Body --------------------------------------------------------------- */
+.ab-docs__body { flex-direction: row; flex-grow: 1; }
+.ab-docs__sidebar {
+    width: 218px;
+    min-width: 170px;
+    border-right-width: 1px;
+    border-right-color: var(--ab-border-strong);
+    background-color: var(--ab-surface-sunken);
+    padding: 6px 0;
+}
+.ab-docs__side-item {
+    padding: 5px 12px;
+    margin: 0;
+    border-width: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    -unity-text-align: middle-left;
+    white-space: normal;
+    color: var(--ab-text);
+}
+.ab-docs__side-item:hover { background-color: var(--ab-accent-bg-weak); }
+.ab-docs__side-item:focus { background-color: var(--ab-accent-bg-weak); }
+.ab-docs__side-item--active {
+    background-color: var(--ab-accent-bg);
+    color: var(--ab-accent);
+    -unity-font-style: bold;
+    border-left-width: 2px;
+    border-left-color: var(--ab-accent);
+}
+.ab-docs__side-empty { padding: 8px 12px; color: var(--ab-text-dim); white-space: normal; }
+.ab-docs__content { flex-grow: 1; padding: 14px 22px 32px 22px; }
+
+/* -- Content elements --------------------------------------------------- */
+.ab-docs__breadcrumb { font-size: 10px; color: var(--ab-text-dim); margin: 0 0 2px 0; white-space: normal; }
+.ab-docs__h1 { font-size: 20px; -unity-font-style: bold; color: var(--ab-accent); margin: 6px 0 8px 0; white-space: normal; }
+.ab-docs__h2 { font-size: 15px; -unity-font-style: bold; color: var(--ab-text-strong); margin: 16px 0 4px 0; white-space: normal; }
+.ab-docs__h3 { font-size: 13px; -unity-font-style: bold; margin: 12px 0 2px 0; color: var(--ab-text-strong); white-space: normal; }
+.ab-docs__para { white-space: normal; margin: 4px 0; font-size: 12px; color: var(--ab-text); }
+.ab-docs__bullet { white-space: normal; margin: 2px 0 2px 10px; font-size: 12px; color: var(--ab-text); }
+
+/* Callouts carry a text badge, not an icon glyph. The emoji this used to print — U+1F4A1 for
+   "tip" and U+2139 for "info" — exist in no font the editor can reach, fallbacks and dynamic
+   atlas population included (measured across all 26 loaded font assets). Twelve of the
+   seventeen callouts in the manual therefore opened with a missing-glyph box. U+26A0 does
+   resolve, but a label that always renders beats one that happens to. */
+.ab-docs__callout {
+    margin: 8px 0;
+    padding: 8px 10px;
+    border-radius: 4px;
+    border-left-width: 3px;
+}
+.ab-docs__callout--info { background-color: var(--ab-info-bg); border-left-color: var(--ab-info); }
+.ab-docs__callout--tip { background-color: var(--ab-ok-bg); border-left-color: var(--ab-ok); }
+.ab-docs__callout--warn { background-color: var(--ab-warn-bg); border-left-color: var(--ab-warn); }
+.ab-docs__callout-badge {
+    font-size: 9px;
+    -unity-font-style: bold;
+    align-self: flex-start;
+    margin-bottom: 3px;
+    letter-spacing: 1px;
+}
+.ab-docs__callout-badge--info { color: var(--ab-info-text); }
+.ab-docs__callout-badge--tip { color: var(--ab-ok-text); }
+.ab-docs__callout-badge--warn { color: var(--ab-warn-text); }
+.ab-docs__callout-text { white-space: normal; font-size: 12px; color: var(--ab-text); }
+
+.ab-docs__code {
+    margin: 8px 0;
+    padding: 8px 10px;
+    border-radius: 4px;
+    background-color: var(--ab-code-bg);
+    border-width: 1px;
+    border-color: var(--ab-code-border);
+}
+.ab-docs__code-text { white-space: pre; font-size: 11px; color: var(--ab-code-text); }
+.ab-docs__code-copy { position: absolute; top: 4px; right: 4px; font-size: 10px; padding: 1px 8px; opacity: 0.7; }
+.ab-docs__code-copy:hover { opacity: 1; }
+.ab-docs__code-copy--done { opacity: 1; color: var(--ab-ok); -unity-font-style: bold; }
+
+.ab-docs__actions { flex-direction: row; flex-wrap: wrap; margin: 8px 0; }
+.ab-docs__action-btn {
+    padding: 4px 14px;
+    margin: 0 6px 4px 0;
+    background-color: var(--ab-accent-bg-weak);
+    border-width: 1px;
+    border-color: var(--ab-accent-border);
+    border-radius: 3px;
+    color: var(--ab-accent-strong);
+}
+.ab-docs__action-btn:hover { background-color: var(--ab-accent-bg-strong); }
+
+.ab-docs__divider { height: 1px; background-color: var(--ab-border); margin: 14px 0; }
+
+.ab-docs__table { margin: 6px 0; }
+.ab-docs__table-row {
+    flex-direction: row;
+    padding: 3px 6px;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--ab-border);
+}
+.ab-docs__table-key { width: 220px; min-width: 140px; -unity-font-style: bold; font-size: 11px; white-space: normal; color: var(--ab-text-strong); }
+.ab-docs__table-val { flex-grow: 1; flex-shrink: 1; font-size: 11px; white-space: normal; color: var(--ab-text); }
+
+.ab-docs__tour-step {
+    margin: 10px 0;
+    padding: 10px 12px;
+    border-radius: 5px;
+    background-color: var(--ab-surface);
+    border-width: 1px;
+    border-color: var(--ab-border);
+}
+.ab-docs__tour-head { flex-direction: row; align-items: center; }
+.ab-docs__tour-check { margin-right: 4px; }
+.ab-docs__tour-title { -unity-font-style: bold; font-size: 13px; color: var(--ab-text-strong); }
+.ab-docs__tour-body { white-space: normal; margin: 4px 0 2px 24px; font-size: 12px; color: var(--ab-text); }

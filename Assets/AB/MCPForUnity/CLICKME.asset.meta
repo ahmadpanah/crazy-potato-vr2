@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 523e2e770b3dedd4ab15ea4adc71945f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 395602
+  packageName: AnkleBreaker MCP Plugin for Unity
+  packageVersion: 1.0.1
+  assetPath: Assets/AB/MCPForUnity/CLICKME.asset
+  uploadId: 1007974

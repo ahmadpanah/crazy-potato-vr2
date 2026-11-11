@@ -959,7 +959,41 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      weaponsandfaces_0: 7765154001768077764
+      weaponsandfaces_1: 7732905978336541453
+      weaponsandfaces_10: -4378403648054326569
+      weaponsandfaces_11: -2991543322862265159
+      weaponsandfaces_12: -3944663831302994076
+      weaponsandfaces_13: -3322453675356127385
+      weaponsandfaces_14: 8908246230896460760
+      weaponsandfaces_15: 515148224178158749
+      weaponsandfaces_16: 2594126767449557085
+      weaponsandfaces_17: 1890677258042695236
+      weaponsandfaces_18: 746625693651756386
+      weaponsandfaces_19: 2463416318306357094
+      weaponsandfaces_2: -5476432050756284703
+      weaponsandfaces_20: -1182218011275843925
+      weaponsandfaces_21: -1835967929132809028
+      weaponsandfaces_22: 1531074437863208439
+      weaponsandfaces_23: -7192839756420386722
+      weaponsandfaces_24: -7635995318345516219
+      weaponsandfaces_25: -7247632438605002553
+      weaponsandfaces_26: 2842784158224471124
+      weaponsandfaces_27: 1766730818238846501
+      weaponsandfaces_28: -8177607507342611676
+      weaponsandfaces_29: 6854773450877027442
+      weaponsandfaces_3: 2015862054180853688
+      weaponsandfaces_30: -8944506864611240566
+      weaponsandfaces_31: -4521153967858625615
+      weaponsandfaces_32: -6605285622451261349
+      weaponsandfaces_33: 2022572678523831889
+      weaponsandfaces_4: -5911706826864951379
+      weaponsandfaces_5: -222776714984983529
+      weaponsandfaces_6: 5398044759936116221
+      weaponsandfaces_7: 562383655207759784
+      weaponsandfaces_8: -6948244256098727339
+      weaponsandfaces_9: -2755455170635033453
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

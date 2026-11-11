@@ -1,0 +1,55 @@
+.ab-docs__rail {
+    --ab-accent: rgb(232, 163, 61);
+    --ab-accent-strong: rgb(240, 214, 176);
+    --ab-accent-bg-weak: rgba(232, 163, 61, 0.1);
+    --ab-accent-bg: rgba(232, 163, 61, 0.2);
+    --ab-accent-border: rgba(232, 163, 61, 0.5);
+    --ab-text-strong: rgb(226, 226, 226);
+    --ab-text-dim: rgb(180, 180, 180);
+    --ab-surface: rgba(255, 255, 255, 0.03);
+    --ab-surface-sidebar: rgba(0, 0, 0, 0.08);
+    --ab-border: rgba(255, 255, 255, 0.08);
+    --ab-border-strong: rgba(0, 0, 0, 0.35);
+    --ab-code-bg: rgba(0, 0, 0, 0.35);
+}
+.ab-docs__rail.ab--light {
+    --ab-accent: rgb(112, 62, 0);
+    --ab-accent-strong: rgb(96, 55, 2);
+    --ab-accent-bg-weak: rgba(232, 163, 61, 0.2);
+    --ab-accent-bg: rgba(232, 163, 61, 0.32);
+    --ab-accent-border: rgba(138, 79, 4, 0.55);
+    --ab-text-strong: rgb(18, 18, 18);
+    --ab-text-dim: rgb(74, 74, 74);
+    --ab-surface: rgba(255, 255, 255, 0.55);
+    --ab-surface-sidebar: rgba(0, 0, 0, 0.04);
+    --ab-border: rgba(0, 0, 0, 0.14);
+    --ab-border-strong: rgba(0, 0, 0, 0.22);
+    --ab-code-bg: rgba(255, 255, 255, 0.82);
+}
+
+.ab-docs__body { min-height: 0; }
+.ab-docs__rail { width: 218px; min-width: 218px; flex-shrink: 0; min-height: 0; border-right-width: 1px; border-right-color: var(--ab-border-strong); background-color: var(--ab-surface-sidebar); }
+.ab-docs__rail .ab-docs__sidebar { width: auto; min-width: 0; min-height: 70px; flex-grow: 1; flex-shrink: 1; border-right-width: 0; background-color: rgba(0,0,0,0); }
+.ab-docs__recommendations { flex-shrink: 0; padding: 10px; border-top-width: 1px; border-top-color: var(--ab-border); }
+.ab-docs__enhance-toggle { margin: 0; height: 38px; background-color: var(--ab-accent-bg-weak); border-width: 1px; color: var(--ab-accent); -unity-text-align: middle-center; font-size: 13px; padding: 0 8px; border-color: var(--ab-accent-border); border-radius: 5px; -unity-font-style: bold; }
+.ab-docs__enhance-toggle:hover { background-color: var(--ab-accent-bg-weak); }
+.ab-docs__carousel { flex-shrink: 0; }
+.ab-docs__carousel-heading { display: none; }
+.ab-docs__carousel-cards { flex-shrink: 0; margin-top: 10px; }
+.ab-docs__package-card { border-width: 1px; border-color: var(--ab-border); border-radius: 6px; overflow: hidden; background-color: var(--ab-surface); margin: 0; padding: 0; -unity-text-align: upper-left; }
+.ab-docs__package-card:hover { border-color: var(--ab-accent-border); }
+.ab-docs__package-image { width: 100%; height: 130px; flex-shrink: 0; }
+.ab-docs__package-body { padding: 6px 8px 7px 8px; }
+.ab-docs__package-name { font-size: 12px; -unity-font-style: bold; color: var(--ab-text-strong); white-space: normal; height: auto; min-height: 0; margin: 0; }
+.ab-docs__package-blurb { font-size: 11px; color: var(--ab-text-dim); white-space: normal; height: auto; margin: 3px 0 0 0; min-height: 0; }
+.ab-docs__package-link { height: 28px; margin: 0; background-color: var(--ab-code-bg); border-width: 0; border-color: var(--ab-accent-border); border-radius: 0; color: var(--ab-accent-strong); font-size: 11px; position: absolute; left: 0; right: 0; bottom: 0; -unity-text-align: middle-center; opacity: 0; }
+.ab-docs__package-link:hover, .ab-docs__package-link:focus { background-color: var(--ab-accent-bg); }
+.ab-docs__carousel-footer { flex-direction: row; align-items: center; margin-top: 10px; justify-content: space-between; }
+.ab-docs__carousel-arrow { width: 56px; height: 34px; margin: 0; font-size: 26px; -unity-text-align: middle-center; background-color: var(--ab-surface); color: var(--ab-text-strong); border-width: 1px; border-color: var(--ab-border); border-radius: 3px; }
+.ab-docs__carousel-arrow:hover, .ab-docs__carousel-arrow:focus { background-color: var(--ab-accent-bg-weak); border-color: var(--ab-accent-border); }
+.ab-docs__carousel-arrow:disabled { opacity: 0.3; }
+.ab-docs__package-media { position: relative; height: 130px; flex-shrink: 0; }
+.ab-docs__package-card:hover .ab-docs__package-link, .ab-docs__package-card:focus .ab-docs__package-link { opacity: 1; }
+.ab-docs__package-card:focus { border-color: var(--ab-accent); }
+.ab-docs__carousel-progress { height: 3px; flex-grow: 1; min-width: 0; margin: 0 10px; border-radius: 2px; overflow: hidden; background-color: var(--ab-border); }
+.ab-docs__carousel-progress-fill { width: 0; height: 3px; background-color: var(--ab-accent); }
