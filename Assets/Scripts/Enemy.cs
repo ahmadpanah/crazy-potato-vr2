@@ -24,6 +24,8 @@ public class Enemy : MonoBehaviour
             direction.Normalize();
 
             transform.position += direction * speed * Time.deltaTime;
+            var playerToTheRight = target.position.x > transform.position.x;
+            transform.localScale = new Vector2(playerToTheRight ? -1 : 1,1);
         }
     }
     public void Hit(int damage)
